@@ -1,0 +1,21 @@
+{
+  "coverage": {
+    "panel_models": 57,
+    "developers": 5,
+    "dense_models_with_model_specific_tokens": 32,
+    "regression_models": 31,
+    "multi_model_generations": 10
+  },
+  "fixed_effect_estimate": {
+    "slope_log_tokens_on_log_parameters": 0.23091256755432582,
+    "generation_clustered_standard_error": 0.13412023180028815,
+    "models": 31,
+    "generation_clusters": 10,
+    "tokens_multiplier_for_10x_parameters": 1.701815863236285,
+    "cluster_correction": "G/(G-1) * (n-1)/(n-G-1)"
+  },
+  "all_generation_slopes_below_one": true,
+  "all_smallest_siblings_more_token_intensive": true,
+  "minimum_smallest_to_largest_contrast": 1.75,
+  "maximum_smallest_to_largest_contrast": 48.67788461538461
+}

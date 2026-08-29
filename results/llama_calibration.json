@@ -1,0 +1,437 @@
+{
+  "estimand": {
+    "total_parameter_wedge": "Q = q + ((C^N)' - B_N)/2, in compute-equivalent generated-token units.",
+    "data_wedge": "delta = (C^D)'/6, in parameter-equivalent units.",
+    "inverse": "Q(delta) = 3 * (R * (N + delta) - D)."
+  },
+  "support": {
+    "observations": 133,
+    "compute_budgets": 10,
+    "experimental_minimum": {
+      "params": 58721963.90368774,
+      "tokens": 1476196592.19,
+      "compute": 6e+18
+    },
+    "experimental_maximum": {
+      "params": 16756432937.32781,
+      "tokens": 1034815724400.0,
+      "compute": 1e+22
+    },
+    "release_to_experimental_maximum": [
+      {
+        "model": "Llama-3-8B",
+        "parameter_multiple": 0.47742858100655994,
+        "token_multiple": 14.49533443135221,
+        "compute_multiple": 72.0
+      },
+      {
+        "model": "Llama-3-70B",
+        "parameter_multiple": 4.1775000838073995,
+        "token_multiple": 14.49533443135221,
+        "compute_multiple": 630.0
+      },
+      {
+        "model": "Llama-3-405B",
+        "parameter_multiple": 24.1698219134571,
+        "token_multiple": 15.0751478086063,
+        "compute_multiple": 3790.8
+      }
+    ]
+  },
+  "fits": {
+    "meta_constrained": {
+      "name": "meta_constrained",
+      "surface": {
+        "E": 0.604347126640356,
+        "A_at_reference_n": 0.08295554508563381,
+        "B_at_reference_d": 0.11264087158318321,
+        "alpha": 0.3309590468796692,
+        "beta": 0.2934919849687632,
+        "log_n_reference": 20.925380786609086,
+        "log_d_reference": 23.2704525480564,
+        "rmse": 0.0039729860534357874,
+        "sse": 0.0020993542180457714,
+        "converged": true
+      },
+      "flagship_compute_optimum": {
+        "params": 392800427479.2675,
+        "tokens": 16123539818875.617
+      },
+      "flatness": [
+        {
+          "parameter_multiplier": 0.1,
+          "token_multiplier": 10.0,
+          "relative_loss_increase_percent": 1.1470300151500878
+        },
+        {
+          "parameter_multiplier": 0.5,
+          "token_multiplier": 2.0,
+          "relative_loss_increase_percent": 0.0979514242617189
+        },
+        {
+          "parameter_multiplier": 2.0,
+          "token_multiplier": 0.5,
+          "relative_loss_increase_percent": 0.09626884430249763
+        },
+        {
+          "parameter_multiplier": 10.0,
+          "token_multiplier": 0.1,
+          "relative_loss_increase_percent": 1.0823944780966248
+        }
+      ],
+      "released_endpoints": [
+        {
+          "model": "Llama-3-8B",
+          "params": 8000000000.0,
+          "tokens": 15000000000000.0,
+          "marginal_rate": 6659.9896996947455,
+          "total_parameter_wedge": 114839752792673.88,
+          "parameter_cost_multiplier": 3.551994506503864
+        },
+        {
+          "model": "Llama-3-70B",
+          "params": 70000000000.0,
+          "tokens": 15000000000000.0,
+          "marginal_rate": 371.27817194552756,
+          "total_parameter_wedge": 32968416108560.79,
+          "parameter_cost_multiplier": 1.7326314690791287
+        },
+        {
+          "model": "Llama-3-405B",
+          "params": 405000000000.0,
+          "tokens": 15600000000000.0,
+          "marginal_rate": 37.762955882357026,
+          "total_parameter_wedge": -918008602936.2129,
+          "parameter_cost_multiplier": 0.980384431561192
+        }
+      ],
+      "common_wedge_test_8B_70B": {
+        "common_data_wedge": -4339592528.76376,
+        "common_parameter_wedge": 28134828165357.14,
+        "nonnegative_data_wedge": false
+      }
+    },
+    "unconstrained": {
+      "name": "unconstrained",
+      "surface": {
+        "E": 0.6046695155371024,
+        "A_at_reference_n": 0.09007885053926994,
+        "B_at_reference_d": 0.10493073827439234,
+        "alpha": 0.31000608834285903,
+        "beta": 0.3136430691585464,
+        "log_n_reference": 20.925380786609086,
+        "log_d_reference": 23.2704525480564,
+        "rmse": 0.003896901329600046,
+        "sse": 0.0020197167163609345,
+        "converged": true
+      },
+      "flagship_compute_optimum": {
+        "params": 621643893235.3829,
+        "tokens": 10188040777447.55
+      },
+      "flatness": [
+        {
+          "parameter_multiplier": 0.1,
+          "token_multiplier": 10.0,
+          "relative_loss_increase_percent": 1.104363427041859
+        },
+        {
+          "parameter_multiplier": 0.5,
+          "token_multiplier": 2.0,
+          "relative_loss_increase_percent": 0.09644965989374792
+        },
+        {
+          "parameter_multiplier": 2.0,
+          "token_multiplier": 0.5,
+          "relative_loss_increase_percent": 0.09661201974509642
+        },
+        {
+          "parameter_multiplier": 10.0,
+          "token_multiplier": 0.1,
+          "relative_loss_increase_percent": 1.1105986095892217
+        }
+      ],
+      "released_endpoints": [
+        {
+          "model": "Llama-3-8B",
+          "params": 8000000000.0,
+          "tokens": 15000000000000.0,
+          "marginal_rate": 8161.030914243952,
+          "total_parameter_wedge": 150864741941854.84,
+          "parameter_cost_multiplier": 4.352549820930108
+        },
+        {
+          "model": "Llama-3-70B",
+          "params": 70000000000.0,
+          "tokens": 15000000000000.0,
+          "marginal_rate": 476.11157312279306,
+          "total_parameter_wedge": 54983430355786.55,
+          "parameter_cost_multiplier": 2.2218540079063676
+        },
+        {
+          "model": "Llama-3-405B",
+          "params": 405000000000.0,
+          "tokens": 15600000000000.0,
+          "marginal_rate": 50.27964201312881,
+          "total_parameter_wedge": 14289765045951.504,
+          "parameter_cost_multiplier": 1.3053368599562287
+        }
+      ],
+      "common_wedge_test_8B_70B": {
+        "common_data_wedge": -4158851352.458485,
+        "common_parameter_wedge": 49043198576377.95,
+        "nonnegative_data_wedge": false
+      }
+    }
+  },
+  "rate_sensitivity": [
+    {
+      "fit": "meta_constrained",
+      "rate_multiplier_8B": 0.75,
+      "rate_multiplier_70B": 0.75,
+      "total_wedge_8B": 74879814594505.4,
+      "total_wedge_70B": 13476312081420.598,
+      "common_data_wedge": -4339592528.763759,
+      "common_parameter_wedge": 9851121124017.867,
+      "nonnegative_data_wedge": false
+    },
+    {
+      "fit": "meta_constrained",
+      "rate_multiplier_8B": 0.75,
+      "rate_multiplier_70B": 1.0,
+      "total_wedge_8B": 74879814594505.4,
+      "total_wedge_70B": 32968416108560.79,
+      "common_data_wedge": -3021481400.2977066,
+      "common_parameter_wedge": 29602985835950.945,
+      "nonnegative_data_wedge": false
+    },
+    {
+      "fit": "meta_constrained",
+      "rate_multiplier_8B": 0.75,
+      "rate_multiplier_70B": 1.25,
+      "total_wedge_8B": 74879814594505.4,
+      "total_wedge_70B": 52460520135700.984,
+      "common_data_wedge": -1649364833.8618832,
+      "common_parameter_wedge": 50164120784247.94,
+      "nonnegative_data_wedge": false
+    },
+    {
+      "fit": "meta_constrained",
+      "rate_multiplier_8B": 1.0,
+      "rate_multiplier_70B": 0.75,
+      "total_wedge_8B": 114839752792673.88,
+      "total_wedge_70B": 13476312081420.598,
+      "common_data_wedge": -5294624941.240478,
+      "common_parameter_wedge": 9053310075448.453,
+      "nonnegative_data_wedge": false
+    },
+    {
+      "fit": "meta_constrained",
+      "rate_multiplier_8B": 1.0,
+      "rate_multiplier_70B": 1.0,
+      "total_wedge_8B": 114839752792673.88,
+      "total_wedge_70B": 32968416108560.79,
+      "common_data_wedge": -4339592528.76376,
+      "common_parameter_wedge": 28134828165357.14,
+      "nonnegative_data_wedge": false
+    },
+    {
+      "fit": "meta_constrained",
+      "rate_multiplier_8B": 1.0,
+      "rate_multiplier_70B": 1.25,
+      "total_wedge_8B": 114839752792673.88,
+      "total_wedge_70B": 52460520135700.984,
+      "common_data_wedge": -3355945778.825615,
+      "common_parameter_wedge": 47788059833535.914,
+      "nonnegative_data_wedge": false
+    },
+    {
+      "fit": "meta_constrained",
+      "rate_multiplier_8B": 1.25,
+      "rate_multiplier_70B": 0.75,
+      "total_wedge_8B": 154799690990842.38,
+      "total_wedge_70B": 13476312081420.598,
+      "common_data_wedge": -5854424426.039084,
+      "common_parameter_wedge": 8585667084361.266,
+      "nonnegative_data_wedge": false
+    },
+    {
+      "fit": "meta_constrained",
+      "rate_multiplier_8B": 1.25,
+      "rate_multiplier_70B": 1.0,
+      "total_wedge_8B": 154799690990842.38,
+      "total_wedge_70B": 32968416108560.79,
+      "common_data_wedge": -5105847498.620512,
+      "common_parameter_wedge": 27281346931999.383,
+      "nonnegative_data_wedge": false
+    },
+    {
+      "fit": "meta_constrained",
+      "rate_multiplier_8B": 1.25,
+      "rate_multiplier_70B": 1.25,
+      "total_wedge_8B": 154799690990842.38,
+      "total_wedge_70B": 52460520135700.984,
+      "common_data_wedge": -4339592528.76376,
+      "common_parameter_wedge": 46418535206696.44,
+      "nonnegative_data_wedge": false
+    },
+    {
+      "fit": "unconstrained",
+      "rate_multiplier_8B": 0.75,
+      "rate_multiplier_70B": 0.75,
+      "total_wedge_8B": 101898556456391.12,
+      "total_wedge_70B": 29987572766839.91,
+      "common_data_wedge": -4158851352.4584846,
+      "common_parameter_wedge": 25532398932283.465,
+      "nonnegative_data_wedge": false
+    },
+    {
+      "fit": "unconstrained",
+      "rate_multiplier_8B": 0.75,
+      "rate_multiplier_70B": 1.0,
+      "total_wedge_8B": 101898556456391.12,
+      "total_wedge_70B": 54983430355786.55,
+      "common_data_wedge": -2770471720.0532618,
+      "common_parameter_wedge": 51026269409006.234,
+      "nonnegative_data_wedge": false
+    },
+    {
+      "fit": "unconstrained",
+      "rate_multiplier_8B": 0.75,
+      "rate_multiplier_70B": 1.25,
+      "total_wedge_8B": 101898556456391.12,
+      "total_wedge_70B": 79979287944733.17,
+      "common_data_wedge": -1322277807.1095269,
+      "common_parameter_wedge": 77618468819052.14,
+      "nonnegative_data_wedge": false
+    },
+    {
+      "fit": "unconstrained",
+      "rate_multiplier_8B": 1.0,
+      "rate_multiplier_70B": 0.75,
+      "total_wedge_8B": 150864741941854.84,
+      "total_wedge_70B": 29987572766839.91,
+      "common_data_wedge": -5163078185.278536,
+      "common_parameter_wedge": 24456619893704.766,
+      "nonnegative_data_wedge": false
+    },
+    {
+      "fit": "unconstrained",
+      "rate_multiplier_8B": 1.0,
+      "rate_multiplier_70B": 1.0,
+      "total_wedge_8B": 150864741941854.84,
+      "total_wedge_70B": 54983430355786.55,
+      "common_data_wedge": -4158851352.458485,
+      "common_parameter_wedge": 49043198576377.95,
+      "nonnegative_data_wedge": false
+    },
+    {
+      "fit": "unconstrained",
+      "rate_multiplier_8B": 1.0,
+      "rate_multiplier_70B": 1.25,
+      "total_wedge_8B": 150864741941854.84,
+      "total_wedge_70B": 79979287944733.17,
+      "common_data_wedge": -3123027184.3844028,
+      "common_parameter_wedge": 74403377748498.78,
+      "nonnegative_data_wedge": false
+    },
+    {
+      "fit": "unconstrained",
+      "rate_multiplier_8B": 1.25,
+      "rate_multiplier_70B": 0.75,
+      "total_wedge_8B": 199830927427318.6,
+      "total_wedge_70B": 29987572766839.91,
+      "common_data_wedge": -5751043559.789255,
+      "common_parameter_wedge": 23826761375054.72,
+      "nonnegative_data_wedge": false
+    },
+    {
+      "fit": "unconstrained",
+      "rate_multiplier_8B": 1.25,
+      "rate_multiplier_70B": 1.0,
+      "total_wedge_8B": 199830927427318.6,
+      "total_wedge_70B": 54983430355786.55,
+      "common_data_wedge": -4964690995.124683,
+      "common_parameter_wedge": 47892189836514.42,
+      "nonnegative_data_wedge": false
+    },
+    {
+      "fit": "unconstrained",
+      "rate_multiplier_8B": 1.25,
+      "rate_multiplier_70B": 1.25,
+      "total_wedge_8B": 199830927427318.6,
+      "total_wedge_70B": 79979287944733.17,
+      "common_data_wedge": -4158851352.458486,
+      "common_parameter_wedge": 72553998220472.44,
+      "nonnegative_data_wedge": false
+    }
+  ],
+  "leave_one_budget_out_meta_constrained": [
+    {
+      "omitted_budget": 6e+18,
+      "rmse": 0.003998609296627131,
+      "total_wedge_8B": 121984709768309.16,
+      "total_wedge_70B": 34461057675911.367
+    },
+    {
+      "omitted_budget": 1e+19,
+      "rmse": 0.0041017233744602855,
+      "total_wedge_8B": 112484600899137.53,
+      "total_wedge_70B": 32468147311691.543
+    },
+    {
+      "omitted_budget": 3e+19,
+      "rmse": 0.004083335551866063,
+      "total_wedge_8B": 111098896487566.64,
+      "total_wedge_70B": 32171821361518.793
+    },
+    {
+      "omitted_budget": 6e+19,
+      "rmse": 0.004076326615473812,
+      "total_wedge_8B": 114043265614213.81,
+      "total_wedge_70B": 32799700626702.574
+    },
+    {
+      "omitted_budget": 1e+20,
+      "rmse": 0.0033898034147285677,
+      "total_wedge_8B": 115238645799658.5,
+      "total_wedge_70B": 33052732487641.547
+    },
+    {
+      "omitted_budget": 3e+20,
+      "rmse": 0.00407361546940482,
+      "total_wedge_8B": 114670497579211.6,
+      "total_wedge_70B": 32932603621254.234
+    },
+    {
+      "omitted_budget": 6e+20,
+      "rmse": 0.004078054249405838,
+      "total_wedge_8B": 114367203976345.17,
+      "total_wedge_70B": 32868376305695.99
+    },
+    {
+      "omitted_budget": 1e+21,
+      "rmse": 0.003967275887434329,
+      "total_wedge_8B": 113477465986929.0,
+      "total_wedge_70B": 32679559515009.47
+    },
+    {
+      "omitted_budget": 3e+21,
+      "rmse": 0.0038042848548763383,
+      "total_wedge_8B": 121338862189263.06,
+      "total_wedge_70B": 34327640336725.055
+    },
+    {
+      "omitted_budget": 1e+22,
+      "rmse": 0.003934668236125546,
+      "total_wedge_8B": 116768532456714.12,
+      "total_wedge_70B": 33375016223516.133
+    }
+  ],
+  "leave_one_budget_out_ranges": {
+    "total_wedge_8B_min": 111098896487566.64,
+    "total_wedge_8B_max": 121984709768309.16,
+    "total_wedge_70B_min": 32171821361518.793,
+    "total_wedge_70B_max": 34461057675911.367
+  }
+}
