@@ -44,7 +44,7 @@ error uses the finite-sample correction
 G/(G-1) * (n-1)/(n-G-1),
 ```
 
-where `G=10` generations and `n=31` models. The Llama analysis fits
+where `G=11` generations and `n=32` models. The Llama analysis fits
 
 ```text
 loss = E + A * N^(-alpha) + B * D^(-beta)

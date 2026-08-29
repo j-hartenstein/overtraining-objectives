@@ -4,11 +4,11 @@ The following checks define a successful reproduction.
 
 ## Public model panel
 
-- 57 models from five developers in the source panel;
-- 31 dense models from ten multi-model generations in the fixed-effects fit;
-- common slope `0.2309125676`;
-- generation-clustered standard error `0.1341202318`;
-- all ten generation slopes below one;
+- 56 models from five developers in the source panel;
+- 32 dense models from 11 multi-model generations in the fixed-effects fit;
+- common slope `0.2263410455`;
+- generation-clustered standard error `0.1295417024`;
+- all 11 generation slopes below one;
 - the smallest sibling more token-intensive in every generation;
 - contrasts ranging from `1.75` to `48.6779` (reported as `1.8` to `48.7`).
 

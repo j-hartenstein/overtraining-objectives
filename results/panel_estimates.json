@@ -1,17 +1,17 @@
 {
   "coverage": {
-    "panel_models": 57,
+    "panel_models": 56,
     "developers": 5,
     "dense_models_with_model_specific_tokens": 32,
-    "regression_models": 31,
-    "multi_model_generations": 10
+    "regression_models": 32,
+    "multi_model_generations": 11
   },
   "fixed_effect_estimate": {
-    "slope_log_tokens_on_log_parameters": 0.23091256755432582,
-    "generation_clustered_standard_error": 0.13412023180028815,
-    "models": 31,
-    "generation_clusters": 10,
-    "tokens_multiplier_for_10x_parameters": 1.701815863236285,
+    "slope_log_tokens_on_log_parameters": 0.2263410455136388,
+    "generation_clustered_standard_error": 0.1295417024173723,
+    "models": 32,
+    "generation_clusters": 11,
+    "tokens_multiplier_for_10x_parameters": 1.6839959609514839,
     "cluster_correction": "G/(G-1) * (n-1)/(n-G-1)"
   },
   "all_generation_slopes_below_one": true,

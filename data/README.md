@@ -2,7 +2,7 @@
 
 ## `model_family_panel.csv`
 
-The panel contains 57 public base-model variants from Meta, DeepSeek, Ai2,
+The panel contains 56 public base-model variants from Meta, DeepSeek, Ai2,
 Alibaba, and Google DeepMind. Each row records the released configuration and
 links to the official paper, model card, or release report supporting it.
 
@@ -14,7 +14,10 @@ because active and total parameters capture different costs.
 
 Important fields:
 
-- `total_params_b`, `active_params_b`: billions of parameters;
+- `release_date`: the release date of the listed model;
+- `generation_date`: a common comparison date for siblings released in stages;
+- `total_params_b`, `active_params_b`: nominal publicly reported model size and
+  active parameters, in billions;
 - `training_tokens_t`: trillions of processed tokens or, where explicitly
   marked, a family dataset/mixture size;
 - `eligible_for_dn`: whether the token count is model-specific;

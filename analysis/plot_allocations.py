@@ -116,6 +116,7 @@ def load_rows(path: Path) -> list[dict]:
                 "generation": row["generation"],
                 "model": row["model"],
                 "date": datetime.fromisoformat(row["release_date"]),
+                "generation_date": datetime.fromisoformat(row["generation_date"]),
                 "n": float(row["total_params_b"]),
                 "d": float(row["training_tokens_t"]),
                 "tokens_per_parameter": 1000 * float(row["training_tokens_t"]) / float(row["total_params_b"]),
@@ -127,7 +128,7 @@ def load_rows(path: Path) -> list[dict]:
 def within_generation(rows: list[dict]) -> list[dict]:
     groups: dict[tuple, list[dict]] = defaultdict(list)
     for row in rows:
-        groups[(row["developer"], row["generation"], row["date"])].append(row)
+        groups[(row["developer"], row["generation"], row["generation_date"])].append(row)
     result = []
     for (developer, generation, date), models in groups.items():
         if len(models) < 2:
@@ -147,7 +148,7 @@ def within_generation(rows: list[dict]) -> list[dict]:
 def release_groups(rows: list[dict]) -> list[dict]:
     groups: dict[tuple, list[dict]] = defaultdict(list)
     for row in rows:
-        groups[(row["developer"], row["generation"], row["date"])].append(row)
+        groups[(row["developer"], row["generation"], row["generation_date"])].append(row)
     result = []
     for (developer, generation, date), models in groups.items():
         result.append(

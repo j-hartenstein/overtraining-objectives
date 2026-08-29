@@ -19,13 +19,13 @@ def close(actual: float, expected: float, absolute: float) -> None:
 def main() -> None:
     panel = json.loads((ROOT / "results/panel_estimates.json").read_text())
     estimate = panel["fixed_effect_estimate"]
-    assert panel["coverage"]["panel_models"] == 57
+    assert panel["coverage"]["panel_models"] == 56
     assert panel["coverage"]["developers"] == 5
-    assert estimate["models"] == 31
-    assert estimate["generation_clusters"] == 10
-    close(estimate["slope_log_tokens_on_log_parameters"], 0.2309125676, 1e-9)
-    close(estimate["generation_clustered_standard_error"], 0.1341202318, 1e-9)
-    close(estimate["tokens_multiplier_for_10x_parameters"], 1.702, 0.002)
+    assert estimate["models"] == 32
+    assert estimate["generation_clusters"] == 11
+    close(estimate["slope_log_tokens_on_log_parameters"], 0.2263410455, 1e-9)
+    close(estimate["generation_clustered_standard_error"], 0.1295417024, 1e-9)
+    close(estimate["tokens_multiplier_for_10x_parameters"], 1.684, 0.002)
     assert panel["all_generation_slopes_below_one"]
     assert panel["all_smallest_siblings_more_token_intensive"]
     close(panel["minimum_smallest_to_largest_contrast"], 1.75, 1e-9)
