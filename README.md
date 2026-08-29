@@ -1,7 +1,7 @@
 # Replication package for *What Do Small Overtrained Language Models Reveal About Deployment Objectives?*
 
-This package reproduces every empirical result in the accompanying anonymous
-paper: the within-generation parameter--token estimate, the released-allocation
+This package reproduces every empirical result in the
+paper: the within-generation parameter--token regression, the released-allocation
 figure, and the Llama 3 loss-surface calibration and robustness checks.
 
 ## Quick start
@@ -16,10 +16,10 @@ python run_all.py
 python verify.py
 ```
 
-`requirements-lock.txt` records the environment used for verification;
-`requirements.txt` gives broader compatible ranges. The analysis is offline
-after installing the public Python dependencies.
-It reads only the two CSV files under `data/` and writes all estimates to
+`requirements-lock.txt` records the development environment;
+`requirements.txt` gives broader compatible ranges. After installing the public Python dependencies,
+the analysis can be entirely computed offline.
+It reads the two CSV files under `data/` and writes all estimates to
 `results/` and the paper figure to `figures/`.
 
 ## Package map
@@ -33,10 +33,7 @@ It reads only the two CSV files under `data/` and writes all estimates to
 | Calibration table | `analysis/llama_calibration.py` | `results/llama_calibration_table.csv` |
 | Local-slope and leave-one-budget-out checks | `analysis/llama_calibration.py` | `results/local_rate_sensitivity.csv`, `results/leave_one_budget_out.csv` |
 
-`run_all.py` executes these steps in order. `verify.py` checks the generated
-files against all numerical values quoted in the paper. No manuscript source,
-author information, Git history, private data, credentials, or absolute local
-paths are included.
+`run_all.py` executes these steps in order.
 
 ## Statistical conventions
 
@@ -62,19 +59,11 @@ recovers the total parameter-side wedge
 Q(delta) = 3 * [R(N,D) * (N + delta) - D].
 ```
 
-It does not separately identify expected inference demand from other benefits
-or costs of compactness.
 
 ## Data provenance and scope
 
 See [`data/README.md`](data/README.md). The model panel contains released
 configurations from official papers, model cards, or developer reports. The
 IsoFLOP observations are the Llama 3 subset of the public Open Athena table.
-Both datasets describe public releases or experiments; neither contains
-personal, private, or user-level data.
+Both datasets describe public releases or experiments.
 
-## Reproducibility
-
-Generated PDFs contain the author metadata `Anonymous`. Numerical outputs are
-plain JSON or CSV. The package intentionally excludes cached environments,
-compiled files, exploratory analyses, and machine-specific paths.
