@@ -67,3 +67,17 @@ configurations from official papers, model cards, or developer reports. The
 IsoFLOP observations are the Llama 3 subset of the public Open Athena table.
 Both datasets describe public releases or experiments.
 
+## How to Cite
+
+If you use this code or data, please cite:
+
+```bibtex
+@inproceedings{hartenstein2026overtraining,
+  title     = {What Does Language Model Overtraining Reveal About Deployment Objectives?},
+  author    = {Hartenstein, Justin and Haupt, Andreas and Koyejo, Sanmi},
+  booktitle = {NeurIPS 2026 Workshop on Economics for Machine Learning},
+  year      = {2026},
+  url       = {https://openreview.net/forum?id=yJmjQqpnGQ}
+}
+```
+
